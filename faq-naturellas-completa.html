@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foire aux questions des Natur'ellas® - FAQ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-pink: #E91E8C;
+            --primary-lilac: #9B59B6;
+            --soft-pink: #FFF0F7;
+            --soft-lilac: #F4ECFF;
+            --dark-text: #2C2140;
+            --medium-text: #6B4C7A;
+            --accent-rose: #FF6B9D;
+            --gradient-bg: linear-gradient(135deg, #FFF0F7 0%, #F4ECFF 100%);
+            --shadow: 0 10px 40px rgba(155, 89, 182, 0.15);
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--gradient-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-lilac) 100%);
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '🌷';
+            position: absolute;
+            font-size: 120px;
+            opacity: 0.1;
+            top: -20px;
+            left: 50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .header::after {
+            content: '🌷';
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.1;
+            bottom: -10px;
+            right: 80px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        .header h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 3.5em;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.95);
+            font-weight: 400;
+            position: relative;
+            z-index: 2;
+        }
+
+        .disclaimer {
+            background: linear-gradient(135deg, #FFE5F1 0%, #F0E5FF 100%);
+            padding: 30px 40px;
+            margin: 30px 40px;
+            border-radius: 20px;
+            border-left: 6px solid var(--primary-pink);
+            box-shadow: 0 5px 20px rgba(155, 89, 182, 0.1);
+        }
+
+        .disclaimer h3 {
+            color: var(--primary-lilac);
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .disclaimer p {
+            color: var(--medium-text);
+            font-size: 1em;
+            line-height: 1.8;
+        }
+
+        .search-section {
+            padding: 40px;
+            background: var(--soft-pink);
+            border-bottom: 3px solid rgba(155, 89, 182, 0.1);
+        }
+
+        .search-box {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 20px 60px 20px 25px;
+            font-size: 1.1em;
+            border: 3px solid var(--primary-lilac);
+            border-radius: 50px;
+            outline: none;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(155, 89, 182, 0.1);
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-pink);
+            box-shadow: 0 8px 30px rgba(233, 30, 140, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5em;
+            color: var(--primary-pink);
+        }
+
+        .stats {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--medium-text);
+            font-size: 0.95em;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        .sidebar {
+            width: 350px;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            background: var(--soft-lilac);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(155, 89, 182, 0.08);
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(155, 89, 182, 0.1);
+            border-radius: 10px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: var(--primary-lilac);
+            border-radius: 10px;
+        }
+
+        .sidebar h2 {
+            font-family: 'Crimson Pro', serif;
+            color: var(--primary-lilac);
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-item {
+            margin-bottom: 12px;
+        }
+
+        .category-link {
+            display: block;
+            padding: 12px 18px;
+            background: white;
+            border-radius: 12px;
+            color: var(--medium-text);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: 2px solid transparent;
+            font-size: 0.95em;
+        }
+
+        .category-link:hover {
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-lilac) 100%);
+            color: white;
+            transform: translateX(8px);
+            border-color: var(--primary-pink);
+        }
+
+        .category-link.active {
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-lilac) 100%);
+            color: white;
+            border-color: var(--primary-pink);
+        }
+
+        .faq-content {
+            flex: 1;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.2em;
+            color: var(--primary-pink);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid var(--primary-lilac);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .faq-item {
+            background: white;
+            border: 2px solid var(--soft-lilac);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 15px rgba(155, 89, 182, 0.05);
+        }
+
+        .faq-item:hover {
+            border-color: var(--primary-pink);
+            box-shadow: 0 8px 30px rgba(233, 30, 140, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--dark-text);
+            font-size: 1.1em;
+            background: var(--soft-pink);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--soft-lilac) 100%);
+        }
+
+        .faq-question.active {
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-lilac) 100%);
+            color: white;
+        }
+
+        .toggle-icon {
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+            color: var(--primary-lilac);
+            flex-shrink: 0;
+            margin-left: 15px;
+        }
+
+        .faq-question.active .toggle-icon {
+            transform: rotate(180deg);
+            color: white;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 30px;
+        }
+
+        .faq-answer.active {
+            max-height: 3000px;
+            padding: 25px 30px;
+        }
+
+        .faq-answer p {
+            color: var(--medium-text);
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 80px 40px;
+            color: var(--medium-text);
+        }
+
+        .no-results h3 {
+            font-size: 2em;
+            color: var(--primary-lilac);
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-lilac) 100%);
+            padding: 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .footer p {
+            font-size: 0.95em;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 1024px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: static;
+                max-height: none;
+            }
+
+            .header h1 {
+                font-size: 2.5em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 40px 20px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .search-section {
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .faq-question {
+                font-size: 1em;
+                padding: 20px;
+            }
+        }
+
+        .tulip-decoration {
+            display: inline-block;
+            animation: sway 3s ease-in-out infinite;
+        }
+
+        @keyframes sway {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-lilac) 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(155, 89, 182, 0.3);
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(155, 89, 182, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌷 Foire aux questions des Natur'ellas® 🌷</h1>
+            <p class="subtitle">Toutes vos réponses pour réussir votre parcours de remise en forme naturelle</p>
+        </div>
+
+        <div class="disclaimer">
+            <h3>⚠️ Avertissement Important</h3>
+            <p><strong>Ce contenu est exclusif au Programme Remise en Forme Naturelle (RFN).</strong> Les informations présentées ici sont destinées uniquement aux participantes inscrites au programme. Toute reproduction, diffusion ou partage de ce contenu, sous quelque forme que ce soit, est strictement interdit sans autorisation préalable. Les marques Natur'ellas® et Programme Remise en Forme Naturelle® sont des marques déposées.</p>
+        </div>
+
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" class="search-input" placeholder="Rechercher dans la FAQ par mots-clés...">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="stats" id="stats">
+                <span id="questionCount"></span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h2><span class="tulip-decoration">🌷</span> Index</h2>
+                <ul class="category-list" id="categoryList"></ul>
+            </aside>
+
+            <main class="faq-content" id="faqContent"></main>
+        </div>
+
+        <div class="footer">
+            <p>© Natur'ellas® - Programme Remise en Forme Naturelle® | Tous droits réservés</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Contact: contact@rafaelatillier.fr</p>
+        </div>
+    </div>
+
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</div>
+
+    <script>
+        const faqData = {
+        "BIEN DÉMARRER et PROTOCOLE RÉINTÉGRATION": [
+                {
+                        "q": "1. Je viens d'intégrer le programme: par quel protocole dois-je commencer ?",
+                        "a": "Veuillez commencer par le protocole Réintégration."
+                },
+                {
+                        "q": "2. Pourquoi je n'ai pas accès aux e-books du programme ?",
+                        "a": "Pour vous donner le temps de bien intégrer le pas à pas du programme en ce début, les e-books et les autres protocoles seront libérés de 7 à 14 jours après votre inscription au programme."
+                },
+                {
+                        "q": "3. Je ne peux pas participer aux lives aux horaires proposées.",
+                        "a": "Vous pouvez les regarder en replay, il y aura toujours un replay. C'est le même lien que vous avez reçu par mail. Il suffit de cliquer pour y accéder."
+                },
+                {
+                        "q": "4. Je n'ai pas reçu de mail pour accéder à la plateforme.",
+                        "a": "Regardez vos courriels indésirables (spam). Sinon, envoyez-nous un e-mail à l\\'adresse suivante : contact@rafaelatillier.fr."
+                },
+                {
+                        "q": "5. Au secours ! J'ai perdu mon code d'accès à la plateforme, quoi faire ?",
+                        "a": "Envoyez-nous un mail à contact@rafaelatillier.fr"
+                },
+                {
+                        "q": "6. Lors des lives, je n'arrive pas à poser une question sur le chat. Pourquoi ?",
+                        "a": "Pour poser vos questions lors des lives, il faut être connecté sur votre compte Google sur YouTube."
+                },
+                {
+                        "q": "7. C'est quoi le chemin des tulipes ?",
+                        "a": "Le chemin de tulipes est un guide ludique pour vous aider à choisir vos protocoles alimentaires au sein du programme. Il est sur la plateforme et sur notre application."
+                },
+                {
+                        "q": "8. Je viens de finir mon protocole Réintégration, quel protocole dois-je faire ?",
+                        "a": "Pour plus de résultats, nous vous suggérons le protocole déblocage métabolique (regardez plus en bas comment bien le suivre). Si cela est difficile pour vous en ce moment, vous pouvez continuer un peu plus sur le protocole réintégration ou suivre le protocole bas teneur en glucides ou alimentation pour la vie."
+                },
+                {
+                        "q": "9. Puis-je rester un peu plus de temps dans le protocole Réintégration ?",
+                        "a": "Aucun souci."
+                },
+                {
+                        "q": "10. Je n'aime pas certains ingrédients proposés, suis-je obligée de les manger ?",
+                        "a": "Non, rien n'est obligatoire au sein du programme."
+                },
+                {
+                        "q": "11. Comment poser mes questions ?",
+                        "a": "Première chose, lisez cette FAQ. Vous pouvez envoyer vos questions par mail contact@rafaelatillier.fr, ou les poser lors des lives questions réponses ou sur votre groupe d'échanges. N'envoyez pas de SMS ni de WhatsApp. N\\'envoyez pas de message sur les réseaux sociaux ouverts de Rafaela."
+                },
+                {
+                        "q": "12. Quel est le délai de réponse par mail ?",
+                        "a": "Cela dépend : dans la plupart du temps de 24 à 72h, hors WE et jours fériés."
+                },
+                {
+                        "q": "13. Suis-je obligée de participer au groupe d'échanges ?",
+                        "a": "Non. Néanmoins, les groupes sont très riches en partage et très appréciés des participantes."
+                },
+                {
+                        "q": "14. Je me sens un peu perdue en ce début de programme : trop de choses :)",
+                        "a": "C'est normal, donnez-vous le temps de bien intégrer le nouveau, d\\'ici à quelques jours, vous serez une experte."
+                },
+                {
+                        "q": "15. Puis-je prendre mon temps pour bien intégrer le programme avant de le commencer ?",
+                        "a": "Oui, faites ça à votre rythme, nous serons ensemble pendant 1 an."
+                },
+                {
+                        "q": "16. Je viens d'intégrer le programme et je voyage dans quelques jours, quoi faire ?",
+                        "a": "Si cela vous arrange, vous pouvez commencer le protocole réintégration et le reprendre à votre retour. Sinon, attendez votre retour et commencez. Profitez bien de votre voyage !"
+                },
+                {
+                        "q": "16. Je suis tombée malade pendant mon protocole, quoi faire ?",
+                        "a": "Vous pouvez arrêter votre protocole et le reprendre d'où vous étiez après votre convalescence."
+                },
+                {
+                        "q": "17. J'ai posé une question sur l'Instagram/ Facebook de Rafaela, et je n\\'ai pas eu de réponse.",
+                        "a": "L'Instagram/ Facebook de Rafaela n'est pas un outil de questions du programme. Occasionnellement, elle peut vous répondre, mais, car il y a plus de 10 000 abonnés grand public. On vous demande de privilégier les outils de communication du programme RFN."
+                },
+                {
+                        "q": "18. Je peux envoyer mon bilan sanguin pour plus d'informations ?",
+                        "a": "Vous pouvez le faire, mais nous ne donnons pas de diagnostic ou de précisions spécifiques à ce sujet. Nous n'intervenons pas non plus avec des conseils personnalisés au sujet d'une maladie. Référez-vous aux conseils de votre médecin traitant."
+                },
+                {
+                        "q": "19 - Est-il normal de ressentir des symptômes du type maux de tête, nausées ou vertige au début du protocole Réintégration ?",
+                        "a": "Oui, si vous étiez habituée à une consommation de sucre trop élevée. Mais ne vous inquiétez pas, ces symptômes de ce sevrage sont éphémères et partent très rapidement. (en général dans 3 jours). Buvez beaucoup. Par contre, attention : si vous ressentez des symptômes désagréables juste parce que vous commencez à manger plus de légumes, le problème n\\'est pas avec les légumes. Cela montre juste que votre corps a vraiment besoin de cette nouvelle alimentation. Le fait de manger des légumes ne devrait pas poser de problème pour votre organisme."
+                },
+                {
+                        "q": "20 - Où envoyer mes mensurations ?",
+                        "a": "Pas besoin de les envoyer, mais vous pouvez les partager sur notre groupe des participantes."
+                },
+                {
+                        "q": "21 - J'ai peur de ne pas intégrer toutes les choses du programme. Que faire ?",
+                        "a": "Je vous assure que vous allez réussir à le faire ! C'est normal de se sentir un peu \"perdue\" au début. Donnez-vous du temps pour intégrer les choses à votre rythme. Regardez nos lives. Si vous êtes trop perdue : écrivez au support et on va vous aider."
+                },
+                {
+                        "q": "22 - Pendant combien de temps, j'aurais accès au programme ?",
+                        "a": "Pendant 1 an complète après l'achat. Attention : le programme RFN n'est pas un abonnement."
+                },
+                {
+                        "q": "23 - J'aurai droit à toutes les mises à jour du programme ?",
+                        "a": "Oui, toutes les nouveautés du programme pendant 1 an : défis, e-books, actualisations, bonus... Et, tout ça gratuitement !"
+                },
+                {
+                        "q": "24 - Comment j'ai accès à la programmation des lives ?",
+                        "a": "Tous les lundis, vous recevrez un mail, avec les liens des lives de la semaine : lundi : questions-réponses avec Jean mercredi : Thématique avec Rafaela Pour accéder aux replays, il faut juste cliquer sur les liens. Les lives ont un planning spécial pendant les vacances d'été et les fêtes de fin d'année."
+                },
+                {
+                        "q": "25- C'est quoi le groupe d'échanges ?",
+                        "a": "Le groupe d'échanges est un bonus du programme pour que vous puissiez échanger avec les autres Natur'Ellas® du programme."
+                },
+                {
+                        "q": "26- Quelles sont les règles de savoir-vivre du groupe d'échanges ?",
+                        "a": "Vous les avez reçu par mail, et le PDF est aussi sur la plateforme. Merci de bien le lire pour bien vous intégrer au fonctionnement de votre groupe. En résumé : nos échanges sont bienveillants, dans le respect mutuel. Des marchandages, des publicités, des conseils à caractère médical, des échanges agressifs ne seront pas tolérés et la personne en question sera avertie et son post supprimé, en cas de récidive, la participante sera bannie du groupe sans préavis."
+                },
+                {
+                        "q": "27 - Par où je commence, une fois sur la plateforme du programme ?",
+                        "a": "Le programme a été élaboré avec une séquence logique pour vous aider. Commencez par la vidéo de bienvenue et ainsi de suite."
+                },
+                {
+                        "q": "28 - Pour les vidéos : je dois tout visionner avant de commencer ?",
+                        "a": "Pas du tout ! Faites-le à votre rythme (vous avez 1 an pour le faire !). Néanmoins, les vidéos de bienvenue, de la check-list et du chemin de tulipes sont importantes pour bien débuter."
+                },
+                {
+                        "q": "29 - Pourquoi la carte RFN est si importante ?",
+                        "a": "Parce qu'elle résume les raisons principales pour lesquelles vous êtes ici ! Les instructions pour bien le faire sont sur la plateforme."
+                },
+                {
+                        "q": "30 - Je prends des médicaments, il y a des contre-indications ?",
+                        "a": "Pour ce qui de l'alimentation : elle est compatible. Par contre, pour les protocoles bien-être qui ont des suggestions de compléments alimentaires (qui seront libérés après 7 ou 14 jours du début du programme), demandez l'avis de votre médecin si vous prenez un traitement lourd ou des anticoagulants, si vous êtes en rémission d'un cancer etc. TRÈS IMPORTANT : N\\'arrêtez pas votre traitement. Si vous avez une maladie rare ou qui implique une attention spéciale avec certains aliments (insuffisance rénale, diabète type 1...), envoyez-nous un mail."
+                },
+                {
+                        "q": "31. Y a-t-il des mises à jour régulières dans le programme ?",
+                        "a": "Oui, le programme est constamment enrichi avec : De nouveaux protocoles. Des nouveautés technologiques. Des recettes supplémentaires. Des lives pour répondre aux questions ou aborder des thématiques spécifiques (ménopause, digestion, etc.)."
+                },
+                {
+                        "q": "32. Puis-je suivre le programme à mon rythme ?",
+                        "a": "Absolument ! Le programme RFN est conçu pour s'adapter à votre emploi du temps et à votre rythme personnel. Vous pouvez : Accéder aux modules à tout moment. Revenir sur des étapes précédentes si nécessaire. Avancer plus rapidement ou plus lentement selon vos besoins."
+                },
+                {
+                        "q": "33. Comment accéder au programme et à ses ressources ?",
+                        "a": "Le programme RFN est accessible via une plateforme en ligne dédiée. Voici les étapes pour commencer : Inscription : Une fois votre inscription validée, vous recevez un email avec vos identifiants. Connexion : Rendez-vous sur www.rafaelatillier.fr pour accéder aux modules, protocoles et vidéos. Application mobile : téléchargez l\\'application KAJABI avec le K en rouge (disponible sur Apple et Google Store) pour un accès pratique depuis votre smartphone ou tablette."
+                },
+                {
+                        "q": "34. Y a-t-il un support technique ou un accompagnement en cas de problème ?",
+                        "a": "Oui, un support technique et humain est disponible pour vous accompagner : - Email : Contactez le support à l'adresse suivante : > contact@rafaelatillier.fr. - FAQ : Une section dédiée sur la plateforme répond aux questions > fréquentes. - Communauté : Le groupe Facebook privé du programme offre un espace > d'échange entre participantes."
+                },
+                {
+                        "q": "35. Le programme inclut-il un accompagnement personnalisé ?",
+                        "a": "Le programme RFN combine un accompagnement collectif et des outils personnalisés : Collectif : Vous bénéficiez de l\\'énergie et du soutien de la communauté Natur\\'Ellas via des groupes privés (comme Facebook). Personnalisé : Les protocoles sont adaptables à vos besoins spécifiques, et vous pouvez poser vos questions directement à l\\'équipe de Rafaela via le support."
+                },
+                {
+                        "q": "36. Puis-je partager les informations du programme avec des proches ?",
+                        "a": "Non, pour des raisons de confidentialité et de respect des droits d\\'auteur, les contenus du programme (protocoles, recettes, vidéos) sont strictement réservés aux participantes. Rafaela Tillier et son équipe insistent sur cet aspect pour protéger la qualité et l\\'intégrité du programme. Attention : Les appellations Natur'Ellas® et Programme Remise en Forme Naturelle® sont des marques déposées. Leur utilisation est strictement interdite sans autorisation préalable. Les documents et outils du programme sont destinés à un usage exclusivement personnel par la participante et demeurent la propriété de Rafaela Tillier. Toute reproduction, diffusion ou partage, sous quelque forme que ce soit, est interdit, sous peine de poursuites judiciaires."
+                }
+        ],
+        "LES PROTOCOLES RFN": [
+                {
+                        "q": "1. Quels sont les différents protocoles alimentaires du programme RFN ?",
+                        "a": "Le programme RFN propose plusieurs protocoles adaptés aux besoins spécifiques des femmes de plus de 40 ans. Suivez le chemin des tulipes dans notre plateforme. Voici un aperçu des principaux protocoles : Réintégration : - Objectif : Bien commencer le programme et préparer le corps pour les prochaines étapes. - Durée : 10 jours, mais variable selon les besoins. Déblocage Métabolique : - Objectif : Sevrage du sucre, détection des intolérances alimentaires, et déblocage de la perte de poids. Protocole PONCTUEL ! - Durée : 21 jours. Bas Glucides : - Objectif : Réduire la résistance à l\\'insuline, l\\'inflammation et accélérer la perte de poids. - Durée : selon le poids à perdre et les blocages métaboliques. Cyclage : - Objectif : Relancer la perte de poids en alternant entre différents types de menus. - Composants : Mélange des protocoles \\\"Alimentation pour la Vie\\\" et \\\"déblocage Métabolique\\\". - Durée :21 jours Alimentation pour la Vie : - Objectif : Stabilisation du poids. - Contenu : Trois types de menus pour maintenir les résultats obtenus. Sérénité Détox : - Objectif : Détoxification et bien-être global. À utiliser comme un protocole JOKER. - Particularité : Comprend plus de 90 recettes et 25 menus complets. - Durée : 30 jours"
+                },
+                {
+                        "q": "2. Y a-t-il des recettes spécifiques pour chaque protocole ?",
+                        "a": "Oui, chaque protocole est accompagné de recettes adaptées en plus des recettes de nos e-books. Par exemple : - Déblocage Métabolique : Recettes sans sucre, sans gluten et riches en protéines. - Bas Glucides : Menus faibles en glucides avec des légumes variés et des protéines maigres. - Sérénité Détox : Plats légers et détoxifiants, à base de bons nutriments."
+                },
+                {
+                        "q": "3. Les protocoles sont-ils flexibles ?",
+                        "a": "Oui, les protocoles sont conçus pour être flexibles et personnalisés. Vous pouvez ajuster les menus selon vos goûts et vos éventuelles intolérances alimentaires, tout en respectant les principes de base."
+                },
+                {
+                        "q": "4. Quel est le protocole qui est spécifique pour les végétariennes et les véganes ?",
+                        "a": "Le Protocole Veggie Protéiné est spécifiquement conçu avec des conseils et une approche complète pour les femmes végétariennes ou celles souhaitant réduire leur consommation de protéines animales tout en maintenant un apport protéique suffisant pour soutenir la perte de poids et le métabolisme. Il est adapté aux recettes et aux protocoles alimentaires du programme."
+                }
+        ],
+        "DÉBLOCAGE MÉTABOLIQUE, BAS GLUCIDES et QUESTIONS QUOTIDIENNES": [
+                {
+                        "q": "1 - Est-ce que le jus détox peut être préparé la veille ?",
+                        "a": "Le jus détox s\\'oxyde très rapidement après sa préparation, car il est riche en antioxydants et vitamines. Il faut donc prioriser sa préparation juste avant consommation. Cependant, on sait que pour certaines familles, le bruit du blender peut déranger le matin. Dans ce cas, vous pouvez le préparer avant, mais fermez-le très bien dans une carafe hermétique et à l\\'abri de la lumière pour réduire l\\'oxydation. Certaines participantes le préparent le soir et le conservent sous vide pendant la nuit aussi pour éviter cette oxydation."
+                },
+                {
+                        "q": "2 - Infusion détox : puis-je utiliser des épices en poudre (cannelle, gingembre) si je ne trouve pas du gingembre frais ou de la cannelle en bâton ?",
+                        "a": "Oui, pas de problème. Par contre, la cannelle en poudre peut gélifier dans l\\'eau. Si elle gélifie, c\\'est moins agréable en bouche. Alors, vous pouvez éviter ces agglomérats ou même tamiser l\\'infusion."
+                },
+                {
+                        "q": "3 - Infusion détox : puis-je utiliser la cannelle en bâton plusieurs fois ?",
+                        "a": "Oui, si elle donne encore un goût à votre infusion."
+                },
+                {
+                        "q": "4 - Faut-il manger des protéines pendant le déjeuner ou le dîner dans la soupe ou la salade détox ?",
+                        "a": "Dans les recettes de soupe détox et salade composée qui font guise de plat pendant la phase 1 et 2 de la détox, vous devez ajouter toujours une bonne portion de protéines (entre 100 et 150 grammes, déjà cuit). D\\'ailleurs, dans le programme, on vous recommande de consommer une portion de protéines de cette taille dans tous vos déjeuners et dîners désormais."
+                },
+                {
+                        "q": "5 - Je ne supporte pas le jus détox de la phase 1 : que dois-je faire ?",
+                        "a": "Si vous ne supportez pas le jus détox, passez directement au petit déjeuner de la phase 2. Même si on vous encourage à tester des nouvelles choses auxquelles vous n\\'êtes pas habituée au sein du programme, on vous dit aussi de ne jamais vous forcer à manger ce que vous n\\'aimez pas."
+                },
+                {
+                        "q": "6 - Je suis constipée après le changement d\\'alimentation. Que faire ?",
+                        "a": "La cause principale de la constipation est le manque d\\'hydratation. Alors, buvez davantage si c\\'est le cas. Si cela persiste, il y a des solutions naturelles comme le psyllium blond, mais il ne faut pas les utiliser d\\'une façon continue. Regardez le protocole Confort Intestinal (module Protocoles Bien-être)."
+                },
+                {
+                        "q": "7 - J\\'ai changé d\\'alimentation et j\\'ai de la diarrhée. Que dois-je faire ?",
+                        "a": "La diarrhée peut se passer à cause d\\'une accélération du transit pour une ingestion plus grande de fibres. Donc, cela doit être quelque chose de transitoire. Si cela persiste, il faut vérifier d\\'autres causes et possiblement aller voir votre médecin."
+                },
+                {
+                        "q": "8 - Est-il normal de ressentir des symptômes du type maux de tête, nausées ou vertige au début du protocole Déblocage Métabolique ?",
+                        "a": "Oui, si vous étiez habitué à une consommation de sucre trop élevée. Mais ne vous inquiétez pas, ces symptômes de ce sevrage sont éphémères et partent très rapidement. Par contre, attention : si vous ressentez des symptômes désagréables juste parce que vous commencez à manger plus de légumes, le problème n\\'est pas avec les légumes. Cela montre juste que votre corps a vraiment besoin de cette nouvelle alimentation. Le fait de manger des légumes ne devrait pas poser de problème pour votre organisme."
+                },
+                {
+                        "q": "9 - Si je n\\'ai pas faim, suis-je obligé de manger les collations du programme ?",
+                        "a": "Vous n\\'avez pas besoin de faire une collation si vous n\\'avez pas faim. Par contre, évitez d\\'arriver à vos repas principaux très affamés."
+                },
+                {
+                        "q": "10 - Que faire si j\\'ai encore faim à la fin du repas ?",
+                        "a": "Probablement, vous n\\'avez pas assez mangé. Donc, mangez vos légumes cuits à volonté et n\\'ayez pas peur de vous resservir des aliments que vous pouvez manger à volonté dans le programme."
+                },
+                {
+                        "q": "11 - Puis-je prendre un dessert après mes repas ?",
+                        "a": "Vous avez plusieurs propositions d\\'aliments sucrés si vous souhaitez prendre un dessert. Par exemple, pendant le Déblocage Métabolique, vous pouvez prendre la mousse Pink tofu, les fraises couvertes avec du chocolat 70%, la poire fusionnée avec des épices, la salade d\\'orange et menthe, etc., vous pouvez manger un fruit cru, ou tout simplement prendre un yaourt et une compote. Évitez par contre les pâtisseries sucrées de boulangerie. Cependant, si vous mangez bien pendant votre repas, normalement, vous n\\'allez pas avoir de la place pour un dessert conséquent. Vous pouvez donc laisser ces aliments avec un goût sucré pour votre collation gourmande plus tard. Mais, si vous ressentez le besoin de prendre un dessert nécessairement, vous pouvez le faire."
+                },
+                {
+                        "q": "12 - Je suis invité à manger chez des amis ou au restaurant pendant mon protocole déblocage Métabolique ou Bas glucides. Que dois-je faire ?",
+                        "a": "Profitez de votre moment avec vos amis ou votre famille sans prise de tête. Regardez bien le cours à propos de la planification des weekends et essayez de manger le plus sainement possible. Par contre, culpabiliser après un repas de fête est contre les règles du programme. Après votre repas libre, reprenez votre protocole alimentaire d\\'où vous avez arrêté. Sinon, bien entendu, si vous faites trop de repas libres, vous allez prendre plus de temps pour atteindre vos objectifs de perte de poids et de transformation physique."
+                },
+                {
+                        "q": "13 - Comment faire si je dois manger souvent au restaurant à cause de mon activité professionnelle ?",
+                        "a": "Privilégiez les plats plus légers tels que le poisson/volaille avec des légumes et les salades sans sauce avec des protéines grillés (c\\'est mieux d\\'assaisonner par vous-mêmes). Évitez les desserts, le pain et les boissons alcoolisées ou sucrées. Comprenez que ces repas ne vont peut-être pas vous rassasier complètement. Alors, il faut se planifier. Portez avec vous des collations saines pour compléter vos repas et buvez beaucoup de liquide."
+                },
+                {
+                        "q": "14 - Dois-je arrêter le café ?",
+                        "a": "Non, vous pouvez continuer à prendre votre café si vous le souhaitez. Par contre, on vous recommande de faire un test : éviter le café pendant les premières semaines et de voir l\\'évolution de votre qualité de sommeil et digestion. Si la réintroduction du café après ces premières semaines ne vous cause aucun problème, vous pouvez reprendre vos habitudes. Dans le cas où vous n'arrivez pas à vous en passer : prenez 1 à 2 tasses par jour le matin et avant 14h."
+                },
+                {
+                        "q": "15 - Puis-je boire mon café pendant l\\'après-midi ?",
+                        "a": "Si cela n\\'a pas d\\'impact sur votre sommeil, il n\\'y a pas de problème. Cependant, on vous recommande d\\'éviter de consommer du café pendant un moment et après le réintroduire pour voir comment évolue votre qualité de sommeil."
+                },
+                {
+                        "q": "16 - Puis-je boire de l\\'eau gazeuse ?",
+                        "a": "Pas de souci ! Peut-être à éviter un petit peu pendant les 3 premiers jours du Déblocage métabolique"
+                },
+                {
+                        "q": "17 - Puis-je boire du kéfir ou du kombucha ?",
+                        "a": "Pas de souci pour ces produits, :-) ils ont de bonnes choses pour votre santé. Mais on vous recommande de les éviter pendant les premières semaines du Déblocage métabolique."
+                },
+                {
+                        "q": "18 - Puis-je boire de la bière sans alcool ? Ou du vin ?",
+                        "a": "La bière sans alcool est aussi une boisson riche en sucres, elle n\\'est pas très compatible avec un processus de perte de poids métabolique. Alors, si vous aimez, plutôt la bière normale, dans vos jours de repas libre, parce que l\\'absence d\\'alcool ne rend pas forcément cette boisson plus saine (bien sûr, si vous n\\'avez pas des problèmes d\\'addiction avec l\\'alcool, ou si vous n\\'allez pas prendre le volant). Cependant, pendant les deux à trois premiers mois de votre perte de poids, c\\'est mieux de limiter un peu la consommation de bière ou de vin à une fois par semaine et de monitorer votre perte de poids semaine après semaine pour voir les effets."
+                },
+                {
+                        "q": "18 - Puis-je utiliser le jus pulco dans l\\'eau ?",
+                        "a": "C\\'est une alternative, mais il y a un tout petit peu de conservateurs dans les jus déjà pressés. Mais c\\'est mieux de prendre les toutes petites bouteilles et les consommer rapidement pour éviter que cela traîne trop longtemps dans le frigo pour éviter l\\'oxydation de ce jus."
+                },
+                {
+                        "q": "19 - J\\'adore le fromage ! Quand est-ce qu\\'il revient ?",
+                        "a": "Il peut être consommé en Réintégration. Il reste absent pendant le début du déblocage métabolique et revient en dernière étape du Déblocage métabolique et plutôt les versions allégées comme le fromage de chèvre frais pour vos tartines. Pour les fromages plus riches en matières graisses, on vous recommande de limiter leurs consommations à quelques fois par mois pendant vos premiers mois de perte de poids."
+                },
+                {
+                        "q": "20 - Puis-je boire du café décaféiné ?",
+                        "a": "Oui, selon les phases du Déblocage métabolique et bas teneur en glucides, une ou deux tasses par jour."
+                },
+                {
+                        "q": "21 - Je suis sportive, puis-je faire les protocoles Déblocage métabolique ou bas glucides ?",
+                        "a": "À priori aucun problème, néanmoins nous vous recommandons d'éviter les activités sportives trop intenses en début du protocole Déblocage métabolique. Veuillez ensuite à toujours faire un goûter avant votre activité. Si vous êtes sportive de haut niveau, ou que vous vous préparez à un marathon par exemple, nous vous suggérons de débuter par les protocoles alimentation pour la vie."
+                },
+                {
+                        "q": "22- Je suis au protocole bas glucides : puis-je introduire quelques féculents ?",
+                        "a": "Bien sûr que oui ! Selon vos objectifs et votre métabolisation des glucides, au long du protocole bas glucides, vous pouvez introduire les féculents au déjeuner ou en forme des recettes du programme (gâteaux, cakes). Nous vous demandons d'observer comment votre corps (et aussi votre perte de poids) va se comporter avec cette réintroduction. C'est important de manger de bons glucides à index glycémique bas et en portion adéquate. Les questions à se poser : combien de kilos, j\\'ai à perdre ? Mon poids est bloqué avec les glucides en plus ? Ai-je une résistance à l'insuline ?"
+                },
+                {
+                        "q": "23 - Puis-je mettre du chou chinois ou d'autres types de feuilles vertes dans mon jus détox ?",
+                        "a": "Oui ! Osez tout avec le jus détox !"
+                },
+                {
+                        "q": "24- Puis-je continuer à boire du jus détox même après le protocole DM ?",
+                        "a": "Oui, les jus détox sont gorgés de minéraux et vitamines hautement assimilables."
+                },
+                {
+                        "q": "25- Lors de suggestions des repas des protocoles, puis-je manger la suggestion du dîner à l'heure du déjeuner ?",
+                        "a": "Aucun souci, si cela vous arrange niveau organisation et satiété."
+                },
+                {
+                        "q": "26 - Quelles sont les quantités pour le jus détox et d\\'autres recettes (soupe détox) ?",
+                        "a": "On ne vous impose pas des quantités. Il faut tester ce que vous aimez le plus. Mais on vous suggère un morceau de fruit (soit une pomme ou une demi pomme), un morceau d\\'un légume (concombre, courgette), une poignée d\\'un légume à feuilles et des épices/herbes/assaisonnements. Mais si vous voulez combiner plusieurs légumes, ou mettre un type en plus de fruits, c\\'est aussi possible. Il y a un livre de recettes pour les boissons détox qui peut aussi vous inspirer pour préparer votre jus détox. Pour la soupe détox, c\\'est un peu pareil. Mettez les légumes que vous aimez le plus et mélangez un peu les choses (courgettes, carottes, oignons, ail, légumes à feuille comme les choux ou les épinards, navets, ...). N\\'oubliez pas de bien assaisonner votre soupe avec plein d\\'épices, d\\'herbes et un peu de sel, pour qu\\'elle soit bonne et savoureuse."
+                }
+        ],
+        "ALIMENTATION, INGRÉDIENTS et HYGIÈNE DE VIE": [
+                {
+                        "q": "1 - Quels types de sucres puis-je consommer au sein du programme ?",
+                        "a": "Nous vous recommandons d\\'éviter surtout les aliments raffinés comme le sucre blanc et de prioriser les sucres à bas index glycémique. Cependant, cela ne veut pas dire que vous pouvez consommer les sucres dits « plus sains » à volonté ou en quantité. Même si ces sucres sont plus sains et font monter moins votre glycémie, ils sont quand même des aliments très riches en énergie et qui vont vous empêcher de perdre du poids si consommés en quantité. Donc, vous pouvez consommer des remplaçants de sucre tels que le miel, le sirop d\\'agave, le sirop d\\'érable, le sucre de coco, le sirop de yacon... mais, sachez qu\\'ils sont riches en énergie et la consommation doit être limitée."
+                },
+                {
+                        "q": "2 - Quels édulcorants puis-je consommer ?",
+                        "a": "Le seul édulcorant que nous recommandons au sein du programme est le stévia (le plus pur que vous pouvez trouver). Tous les autres édulcorants synthétiques comme le sucralose, l'aspartame ont des conséquences négatives pour votre microbiote intestinal. Le xylitol peut causer également des perturbations intestinales chez certaines personnes."
+                },
+                {
+                        "q": "3 - Je suis intolérante au gluten, les farines puis-je utiliser ?",
+                        "a": "Les farines de sarrasin, avoine certifié sans gluten, sorghum, quinoa, pois chiche, coco. La farine de riz aussi est possible, mais pas très recommandée, car index glycémique trop important. Regardez nos suggestions de remplacement dans le protocole Intolérances Alimentaires module Mandala Métabolique (Module 4)."
+                },
+                {
+                        "q": "4 - Puis-je remplacer les farines des recettes par d\\'autres farines ?",
+                        "a": "A priori oui, mais la recommandation est plutôt non. Si vous changez seulement la farine, la recette risque de ne pas donner un bon résultat. Si vous avez une farine donnée, le mieux c\\'est de chercher une recette avec ce type de farine directement."
+                },
+                {
+                        "q": "5 - Fruits secs, puis-je en consommer ?",
+                        "a": "Les fruits secs sont très concentrés en sucre. Comme vous avez compris, dans le programme, on va essayer d\\'éviter les aliments qui ont une haute densité de sucre (parfois cachées). Les fruits secs en grande quantité ne vont pas alors vous aider à perdre du poids. Il faut donc contrôler la consommation de ces produits. Rien n\\'est interdit, mais il y a des aliments qui ne vont pas contribuer à votre perte de poids."
+                },
+                {
+                        "q": "6 - Quelle quantité de noix et oléagineuses puis-je consommer par jour ?",
+                        "a": "Une petite poignée par jour est déjà suffisante. Les oléagineuses sont riches en nutriments, mais aussi en énergie."
+                },
+                {
+                        "q": "7 - Quelle quantité d\\'huile d\\'olive (ou d\\'autres huiles) puis-je consommer par jour ?",
+                        "a": "L\\'huile d\\'olive et d\\'autres huiles végétales sont extrêmement riches en énergie. Il faut donc limiter la consommation de ces produits si vous voulez perdre du poids plus facilement. On vous recommande d\\'en prendre une cuillère à soupe par jour pour préparer vos aliments et aussi assaisonner vos plats."
+                },
+                {
+                        "q": "8 - Combien d\\'œufs puis-je consommer par jour ?",
+                        "a": "Même si l\\'œuf n\\'est pas le produit qui fait monter le cholestérol (comme dit dans les magazines de « santé » des années 90), c\\'est bien de limiter sa consommation à 2-3 œufs par jour à cause de la graisse saturée dans ces produits. Mais il ne faut pas avoir peur des œufs. Les sucres rapides, les pains, les pâtes, les produits avec des sucres et des farines raffinées et du gras trans seront beaucoup plus néfastes à votre niveau de cholestérol que les œufs."
+                },
+                {
+                        "q": "9 - Quels laits végétaux puis-je consommer ?",
+                        "a": "Cela dépend d\\'où vous êtes dans le programme. Si vous êtes débutant, on va privilégier les laits qui ont une teneur en glucides (sucres) basse comme le lait de soja, coco, amandes et cajou. Si vous êtes plus avancée dans le programme, vous pouvez ajouter le lait d\\'avoine. Attention pour ne pas acheter du lait végétal avec des sucres ajoutés. En France, la majorité des laits végétaux ont malheureusement des quantités considérables de sucres. Prioriser sont les produits sans sucres ajoutés pour favoriser votre perte de poids. Il est possible de faire son propre lait végétal maison, regardez les recettes disponibles sur Internet."
+                },
+                {
+                        "q": "10 - Quels types de yaourt puis-je consommer au sein du programme ?",
+                        "a": "On vous recommande d\\'éviter les laitages pendant vos premières semaines de programme. Ensuite, vous pouvez réintroduire ces laitages et voir les impacts sur votre digestion. Pour les produits végétaux, vous avez plusieurs options à base de soja, amandes ou coco. Privilégiez les produits sans parfum parce qu\\'ils n\\'ont pas de sucre. Pour les produits animaux, les yaourts à base de lait de chèvre et de brebis peuvent aussi être consommés ainsi que les yaourts nature, les fromages blancs et le skyr."
+                },
+                {
+                        "q": "11 - Quels types de protéines animales puis-je consommer au sein du programme ?",
+                        "a": "Toutes les protéines (volaille, poissons, fruits de mer, viande rouge, canard, porcs). Par contre, pour favoriser votre digestion et limiter votre consommation de gras, on vous suggère de prioriser les viandes blanches, laisser de la place pour la viande rouge quelques fois par mois et éviter ces viandes rouges le soir parce qu\\'elles prennent trop de temps pour la digestion."
+                },
+                {
+                        "q": "12 - Puis-je consommer du jambon ?",
+                        "a": "Les jambons ont normalement des conservateurs qui ne sont pas exactement très sains à consommer. Il y a cependant des jambons sans nitrite et sans conservateurs chimiques qui peuvent être plus intéressants, mais qui ont quand même une concentration de sel très grande. Ces produits sont donc à consommer quelques fois par mois quand vous n\\'avez pas trop le temps."
+                },
+                {
+                        "q": "13 - Puis-je consommer du poisson en boîte ?",
+                        "a": "Pas de problème, vous pouvez le faire. Les sardines et les maquereaux sont même recommandés de temps en temps pour booster vos omégas 3. Par contre, il vaut mieux limiter la consommation de thon quelques fois par mois à cause de leur concentration en métaux lourds."
+                },
+                {
+                        "q": "14 - Puis-je manger du pain ?",
+                        "a": "On vous recommande de consommer du pain blanc et de la baguette blanche seulement de temps en temps, et prioriser d\\'autres sources de glucides plus intéressantes pour votre perte de poids dans la vie de tous les jours. Par exemple, on vous suggère des tartines du type WASA (fibres, légères), vous avez des recettes dans l'e-book Pains des Natur'Ellas® sur la plateforme . Vous avez aussi aussi plein de recettes pour vous inspirer pour votre petit déjeuner (pancakes, cake salé, mug cake...)"
+                },
+                {
+                        "q": "15 - Je n'aime pas certains ingrédients / aliments proposés dans les protocoles/ recettes : suis-je obligée de les manger ?",
+                        "a": "Absolument pas, si vous n'aimez pas un aliment/ ingrédient : ne les mangez pas ! Il y a plein d'autres recettes ou suggestions que vous pouvez essayer et ainsi trouver votre bonheur au sein du programme."
+                },
+                {
+                        "q": "16- Je ne suis pas habituée à prendre le petit déjeuner le matin : suis-je obligée d'en prendre ?",
+                        "a": "Pas du tout ! Néanmoins, on vous invite à observer si le fait de ne pas prendre de petit déjeuner vous provoque la fameuse fringale de 11h, où vous vous sentez faible et où vous devez manger quelque chose pour être bien. Le petit déjeuner est aussi un outil qui vous permet d'arriver moins affamée au déjeuner."
+                },
+                {
+                        "q": "17- Je pratique le jeûne intermittent : puis-je continuer à le faire ?",
+                        "a": "Au sein du programme, nous ne recommandons aucun type de jeûne. Mais, si vous vous sentez bien avec le jeûne intermittent : vous pouvez continuer à le pratiquer."
+                },
+                {
+                        "q": "18- Au secours ! J'ai craqué : que dois-je faire ?",
+                        "a": "Pas de panique, ni de culpabilité ! Les craquages font partie du processus. Revenez où vous étiez dans le programme et continuez. Une suggestion : analyser le motif du craquage : j'ai mangé peu ? De la fatigue ? Du stress ? Je dors mal en ce moment ? Des émotions du type : solitude, tristesse ... ? Mais, le plus important, n'utilisez pas le craquage pour entretenir des pensées saboteuses du type : ça y est ! J'ai craqué, j'abandonne, c'est fini pour moi !"
+                },
+                {
+                        "q": "19 - Quelles tisanes puis-je boire au sein du programme ?",
+                        "a": "Toutes, pas de restriction au niveau des tisanes."
+                },
+                {
+                        "q": "20- Je pars en vacances, comment dois-je faire ?",
+                        "a": "Profitez de vos vacances ! Selon vos objectifs, essayez de faire de votre mieux. Mais, si vous voulez faire une pause : ce n'est pas grave du tout ! Si vous avez fait un peu trop d'excès, à votre rentrée de vacances : revenez au programme et faites le protocole Déblocage métabolique."
+                },
+                {
+                        "q": "21 - Dès que je mange un peu de glucides : je prends du poids, pourquoi ?",
+                        "a": "Je vous invite à lire la question 1 du module prises de sang."
+                },
+                {
+                        "q": "22- Je peux manger du soja ? Je prends un traitement pour la thyroïde.",
+                        "a": "La recommandation est d'éviter de manger des aliments à base de soja dans les 4 heures qui suivent la prise de votre traitement."
+                },
+                {
+                        "q": "23 - Je bois très peu d'eau : je ne sais pas si je vais arriver à boire la quantité d'eau idéale pour moi.",
+                        "a": "Commencez par augmenter progressivement votre hydratation. Les tisanes, les eaux aromatisées sans sucre comptent dans votre apport journalier. N'oubliez pas qu'une hydratation suffisante est très importante pour votre perte de poids."
+                },
+                {
+                        "q": "24 - J'ai un souci d'insuffisance rénale : comment bien suivre le programme ?",
+                        "a": "Il faut juste vérifier avec votre médecin, si vous n'avez pas de restriction au niveau de l'ingestion de protéines et de l'eau."
+                },
+                {
+                        "q": "25- Je fais de la rétention hydrique, j'ai peur de boire.",
+                        "a": "Si vous n'avez pas de soucis particuliers de santé, il ne faut pas avoir peur de boire : l'eau est le meilleur diurétique qui existe !"
+                },
+                {
+                        "q": "26- Mon entourage ne me soutient pas : comment faire ?",
+                        "a": "Déjà, comme je dis toujours : votre processus est à vous ! Vous devez le faire d'abord pour vous-mêmes, mais je sais que parfois avoir un entourage qui ne nous soutient pas peut-être difficile. Je vous invite à regarder les modules du programme dédiés à cette thématique."
+                },
+                {
+                        "q": "27- Je vous ai envoyé un mail et je n'ai eu de réponse.",
+                        "a": "Nous ne répondons pas aux mails avec les tableaux/photo/ mensurations, mais nous les regardons et ils sont dans nos archives pour accompagner votre évolution. Si vous avez envoyé un mail avec une question spécifique et que vous n'avez pas reçu de réponse au bout d'une semaine : SVP, renvoyez-le. On reçoit des centaines de mails et on peut parfois zapper un mail ou il peut tomber notre spam. Nous vous remercions pour votre compréhension. contact@rafaelatillier.fr"
+                },
+                {
+                        "q": "28- Où puis-je acheter certains produits du programme : les graines (chia, lin...), les farines (coco, amandes ...) ?",
+                        "a": "En général, vous trouvez ces produits assez facilement dans les boutiques bio et également sur Internet sur les sites de la fourche, greenweez..."
+                },
+                {
+                        "q": "29- Je voulais acheter des compléments alimentaires : quelle marque me conseillez-vous ?",
+                        "a": "Nous ne travaillons avec aucun laboratoire. Aucun des compléments alimentaires que nous vous suggérons au sein du programme n\\'est pas obligatoire. La plupart des compléments, vous trouverez en pharmacie. Néanmoins, nous savons que l'internet peut faciliter la vie de certaines parmi vous : nous aimons bien le site ONATERA par son excellent rapport qualité-prix. Mais vous êtes libres de choisir des compléments selon la disponibilité, le budget, etc. Il est préférable de choisir des produits bio de bonne qualité. Vous pouvez aussi consulter votre pharmacien de confiance."
+                },
+                {
+                        "q": "30 - Puis-je remplacer les graines de chia par les graines de lin dans la préparation du chia pudding ?",
+                        "a": "Pas tout à fait ! Car les graines de lin doivent être mixées, moulues ou cuites et la graine de chia pas forcément. Mais, vous pouvez les consommer moulues dans un yaourt ou dans un smoothie par exemple."
+                },
+                {
+                        "q": "31- Peut-on consommer des protéines en poudre ?",
+                        "a": "Oui, c'est complètement compatible. Juste attention aux protéines du type WHEY si vous avez des problèmes avec les laitages."
+                },
+                {
+                        "q": "32 - Combien de noix du Brésil doit-on manger par jour ?",
+                        "a": "En général, concernant les oléagineux, on peut en manger une belle poignée par jour, mais dans le cas spécifique de la noix du Brésil, la quantité indiquée sera 2 par jour : l'apport idéal de sélénium par jour."
+                },
+                {
+                        "q": "33- Quel est l'index glycémique des fruits ?",
+                        "a": "La plupart des fruits ont un IG bas/ moyen, à l'exception des fruits secs, de la pastèque (75) et du melon (70) (dans le cas de ces deux derniers, une portion de 100g est l'idéale)"
+                },
+                {
+                        "q": "34 - Puis-je sucrer ma tisane avec de la stévia ?",
+                        "a": "Si vous ne pouvez pas (encore !) vous passer du goût sucré, le stévia peut être une bonne option pour vous aider dans la transition."
+                },
+                {
+                        "q": "35 - Puis-je utiliser les recettes sucrées du programme à quel moment ?",
+                        "a": "À n\\'importe quel moment, les recettes sont là pour vous aider à tenir bon et ne pas craquer. Je préfère que vous utilisiez les recettes du programme, si vous avez une envie sucrée, car elles vont vous permettre de bien contrôler vos envies (sans culpabilité)."
+                },
+                {
+                        "q": "36- Puis-je manger des pâtes de konjac ?",
+                        "a": "Oui, les pâtes de konjac sont bas glucides et très riches en fibres, donc complètement compatibles avec le programme."
+                },
+                {
+                        "q": "37- Que faire si j'ai envie de manger des pâtes ?",
+                        "a": "Le secret est de bien composer votre assiette, avec des pâtes complètes, une bonne portion de protéines et aussi de légumes."
+                },
+                {
+                        "q": "38- Que faire si j'ai envie de manger sucré ?",
+                        "a": "Choisissez une recette du programme (e-book plaisir sucré) pour vous aider à gérer l'envie de sucre."
+                },
+                {
+                        "q": "39 - Le chrome sert à quoi ?",
+                        "a": "Il sert à vous aider à gérer les envies de sucre et rééquilibrer le métabolisme du glucose. Plus d\\'informations sur le protocole Résistance à l'insuline (module 4). Il n'est pas recommandé si vous êtes diabétique."
+                },
+                {
+                        "q": "40 - Puis-je manger du porc, du lapin, de l\\'agneau, du veau ou du canard ?",
+                        "a": "Nous ne proposons pas de recettes avec ces viandes, mais vous pouvez les manger sans aucun souci."
+                },
+                {
+                        "q": "41. Quel chocolat puis-je manger ?",
+                        "a": "Nous recommandons le chocolat à 70 % ou plus : deux carrés à déguster de préférence à la fin d'un repas."
+                },
+                {
+                        "q": "43. Quelle est la tisane contre la rétention hydrique que les Natur'Ellas en parlent ?",
+                        "a": "C'est une synergie que Rafaela a créée, elle est disponible sur Instagram : ⅓ de pissenlit, ⅓ de fenugrec, ⅓ de prêle, 1 càs du mélange pour 250 ml d'eau - boire jusqu'à 3 tasses par jour."
+                },
+                {
+                        "q": "44. Quels thés contiennent de la théine ?",
+                        "a": "Tous les thés : vert, noir, blanc, matcha contiennent de la théine (la caféine du thé) donc, ce sont de boissons \"stimulantes\" à éviter si vous avez des problèmes de sommeil ou de nervosité. Le rooibos par contre ne contient pas de théine."
+                },
+                {
+                        "q": "45. Je suis intolérante au lactose, quels aliments éviter ?",
+                        "a": "Les laitages en général, sauf les produits avec l\\'appellation sans lactose. Pour plus d'informations, regardez le protocole Intolérances Alimentaires (module 4)."
+                },
+                {
+                        "q": "46. Je ne peux pas manger d'œuf, comment le remplacer ?",
+                        "a": "Pour plus d'informations, regardez le protocole Intolérances Alimentaires (module 4)."
+                },
+                {
+                        "q": "47. Que dois-je manger après le sport ?",
+                        "a": "C'est important de manger un repas avec une portion de protéine pour aider à la récupération musculaire."
+                },
+                {
+                        "q": "48 - Je suis végétarienne ou je veux manger moins de viande, puis-je compléter mon apport en protéine avec de la protéine végan ?",
+                        "a": "Oui. Vérifiez ici nos suggestions : https://www.rafaelatillier.live/complements"
+                },
+                {
+                        "q": "49. Qu'en pensez-vous du collagène ?",
+                        "a": "Le collagène peut être un très bon allié de la peau, des cheveux, des articulations, à la condition qu'il soit bien dosé, avec une bonne biodisponibilité et enrichi de cofacteurs. Pour les résultats : l'usage est sur du long terme.50. Puis-je manger du miel ? Oui, avec modération, dans le cadre d'un aliment santé."
+                },
+                {
+                        "q": "51. Pendant combien de temps, puis-je utiliser le vinaigre de cidre ?",
+                        "a": "Vous pouvez l'utiliser sur le long terme, aucun souci. Si vous avez l\\'émail des dents fragiles, prenez-le en gélules, si vous avez un estomac sensible, faites un test pour savoir si vous le supportez bien."
+                },
+                {
+                        "q": "52. Quel est le meilleur riz à consommer ?",
+                        "a": "Préférez le riz basmati ou le demi-complet."
+                },
+                {
+                        "q": "53. Je suis sur le protocole bas glucides, est-ce que les glucides sont interdits ?",
+                        "a": "Il n'y a pas d'interdiction dans le programme, mais on vous propose de diminuer un peu les glucides pour améliorer la charge glycémique de vos repas et accélérer le métabolisme (surtout si vous soupçonnez une résistance à l'insuline par exemple). Mais rien ne vous empêche de rajouter une portion de glucides à votre déjeuner, mais c'est très important d'observer si cela ralenti ou pas votre perte de poids."
+                },
+                {
+                        "q": "54. Je peux manger un dessert dans le protocole bas glucides ?",
+                        "a": "Bien sûr, choisissez une de nos recettes et faites-vous plaisir."
+                },
+                {
+                        "q": "55. Que faire si je suis trop invitée ? Plus de 2 fois par semaine ...",
+                        "a": "Il faut analyser le réel impact de ces invitations sur vos objectifs de perte de poids. Trop d'alcool ? Trop d'apéros ? Trop de desserts ? C'est important aussi de faire face avec sincérité à vos priorités. C'est un travail interne que personne d\\'autre ne peut faire à votre place."
+                },
+                {
+                        "q": "56. Quelle est la différence entre le son d'avoine et l'avoine ?",
+                        "a": "Le son d\\'avoine et l\\'avoine sont deux produits dérivés de l\\'avoine, mais ils ont des caractéristiques différentes : L\\'avoine est une céréale cultivée pour ses grains, qui sont ensuite transformés en flocons d\\'avoine, en farine d\\'avoine ou utilisés dans divers plats. Le son d\\'avoine est la couche externe de l\\'avoine qui est retirée lors du processus de raffinage pour obtenir des flocons d\\'avoine. Le son d\\'avoine est riche en fibres alimentaires, donc plein de propriétés bénéfiques pour la santé digestive."
+                },
+                {
+                        "q": "57. Qu\\'est-ce qu\\'un féculent ?",
+                        "a": "Les féculents sont une catégorie d\\'aliments riches en glucides complexes. Ils comprennent des aliments tels que les céréales (riz, blé, maïs), les tubercules (pommes de terre, patates douces), les produits céréaliers (pain, pâtes, céréales), etc."
+                },
+                {
+                        "q": "58. Qu\\'est-ce qu\\'une légumineuse ?",
+                        "a": "Les légumineuses sont des plantes dont les graines ou les fruits sont contenus dans des gousses. Elles comprennent des aliments tels que les haricots, les pois chiches, les lentilles, les pois, etc. Les légumineuses sont riches en protéines végétales, en fibres et en divers nutriments essentiels."
+                },
+                {
+                        "q": "59. La famille des courges : potimarron, butternut ... ce sont des légumes ou des féculents ?",
+                        "a": "Les courges telles que le potimarron et la butternut font partie de la famille des cucurbitacées et sont considérées comme des légumes. Les courges sont des légumes d\\'hiver qui sont riches en fibres, en vitamines et en minéraux, mais elles ne sont pas classées parmi les féculents."
+                },
+                {
+                        "q": "60. Le petit pois est un légume, une légumineuse ou un féculent ?",
+                        "a": "Les petits pois sont considérés comme des légumes et sont appréciés pour leur goût sucré et leur texture tendre. Ils sont riches en fibres, en vitamines et en minéraux, ce qui en fait un choix sain pour une alimentation équilibrée."
+                },
+                {
+                        "q": "61. Qu\\'est-ce qu\\'une céréale ?",
+                        "a": "Une céréale est une plante cultivée pour ses grains comestibles. Les céréales les plus courantes incluent le blé, le riz, le maïs, l\\'orge, l\\'avoine, le seigle, le millet, le sorgho, etc."
+                },
+                {
+                        "q": "63. C'est quoi le gluten ?",
+                        "a": "Le gluten est une protéine présente naturellement dans certaines céréales comme le blé, l\\'orge et le seigle. Le gluten est composé de deux protéines principales : la gliadine et la gluténine. Cette protéine élastique confère aux produits à base de farine de blé leur texture caractéristique et les aide à lever lors de la cuisson. Le gluten est responsable de la texture moelleuse et élastique du pain, des pâtes et de nombreux autres produits de boulangerie. Cependant, certaines personnes sont intolérantes au gluten, ce qui peut provoquer des troubles digestifs tels que la maladie cœliaque ou une sensibilité au gluten non cœliaque. Pour ces personnes, il est nécessaire d\\'éviter les aliments contenant du gluten pour prévenir les symptômes indésirables."
+                },
+                {
+                        "q": "64. C'est quoi le lactose ?",
+                        "a": "Le lactose est un sucre naturel présent dans le lait et les produits laitiers. Il est composé de deux molécules de sucre simples, le glucose et le galactose. Le lactose est digéré par une enzyme appelée lactase, produite dans l\\'intestin grêle, pour être transformé en glucose et en galactose, qui peuvent ensuite être absorbés par l\\'organisme. Certaines personnes peuvent présenter une intolérance au lactose, ce qui signifie qu\\'elles ne produisent pas suffisamment d\\'enzymes lactase pour digérer correctement le lactose. Cela peut entraîner des symptômes digestifs tels que des ballonnements, des gaz, des crampes abdominales et des diarrhées après la consommation de produits laitiers contenant du lactose."
+                },
+                {
+                        "q": "65. C'est quoi le gomasio ?",
+                        "a": "Le gomasio est un condiment japonais traditionnel composé de graines de sésame grillées et de sel marin. Les graines de sésame sont généralement toastées puis broyées avec du sel pour créer une poudre fine et aromatique. Le gomasio est utilisé pour sa saveur salée et légèrement noisette, et il est souvent saupoudré sur les plats pour les assaisonner."
+                },
+                {
+                        "q": "66. Comment utiliser le tofu ?",
+                        "a": "Le tofu est un ingrédient polyvalent et sain qui peut être utilisé de différentes manières dans les recettes. Voici quelques idées pour utiliser le tofu dans la cuisine : Mariné et grillé : Coupez le tofu en cubes ou en tranches, faites-le mariner dans une sauce de votre choix (par exemple, sauce soja, gingembre, ail) puis faites-le griller ou cuire au four pour obtenir une texture croustillante à l\\'extérieur et moelleuse à l\\'intérieur. Sauté : Ajoutez du tofu coupé en dés à des sautés de légumes pour ajouter de la protéine végétale et de la texture aux plats. Émietté : Émiettez du tofu ferme pour le remplacer dans des recettes qui appellent de la viande hachée, comme les tacos, le chili végétariens ou les sauces bolognaises. Dans les smoothies : Ajoutez du tofu soyeux à vos smoothies pour augmenter la teneur en protéines et obtenir une texture crémeuse. Dans les desserts : Utilisez du tofu soyeux comme base pour des desserts végétaliens tels que des puddings, des cheesecakes ou des mousses au chocolat. Le tofu peut absorber les saveurs des ingrédients avec lesquels il est associé, ce qui en fait un ingrédient polyvalent pour une variété de recettes salées et sucrées."
+                },
+                {
+                        "q": "67. Qu\\'est-ce que le Konjac ?",
+                        "a": "Le konjac est une plante asiatique souvent transformée en une pâte ou en une forme de nouilles appelées \\\"shirataki\\\" ou \\\"nouilles de konjac\\\". Ces nouilles sont très faibles en calories et en glucides, ce qui en fait un substitut aux pâtes traditionnelles pour les personnes suivant une alimentation faible en glucides ou cherchant à réduire leur apport énergique"
+                },
+                {
+                        "q": "68. Puis-je utiliser de la moutarde ?",
+                        "a": "Pas de souci, elle peut être utilisée dans nos recettes de vinaigrette."
+                },
+                {
+                        "q": "69. Pour quels ingrédients puis-je remplacer la crème ?",
+                        "a": "Crème de coco : Idéale pour les plats sucrés ou salés, elle apporte une texture onctueuse et un goût subtil. Crème d\\'amande : Une alternative légère et douce, parfaite pour les sauces et desserts. Crème de cajou : Mélangez des noix de cajou trempées avec un peu d\\'eau pour obtenir une crème riche et onctueuse. Lait de soja épais : Utilisable dans les recettes nécessitant une consistance crémeuse. Yaourt végétal (coco, amande, soja) ou nature : Remplace la crème dans les sauces ou les desserts. Avocat mixé : Apporte une texture crémeuse pour les sauces froides ou les smoothies. Tofu soyeux : Mixé, il remplace la crème dans les recettes salées ou sucrées."
+                },
+                {
+                        "q": "70. Quelle quantité de noix toutes confondues puis-je manger par jour ?",
+                        "a": "Une portion correspond à environ une petite poignée de noix mélangées (amandes, noix de cajou, noisettes, noix du Brésil, etc.)."
+                },
+                {
+                        "q": "71. Puis-je manger du tapioca ?",
+                        "a": "Le tapioca peut être consommé, mais avec modération, en fonction de vos objectifs de perte de poids et de votre tolérance aux glucides. Voici quelques points à considérer : Index glycémique élevé : Le tapioca peut provoquer une élévation rapide de la glycémie, ce qui n\\'est pas idéal pour la perte de poids ou en cas de résistance à l\\'insuline. Faible en nutriments : Il est principalement composé d\\'amidon et manque de fibres, protéines, ou vitamines."
+                },
+                {
+                        "q": "72. Quelles sont les graines qu'on doit moudre ou pas ?",
+                        "a": "Certaines graines doivent être moulues pour que leurs nutriments soient correctement assimilés par le corps : - Graines de lin : - Leur coque est très dure, donc il est essentiel de les moudre pour > bénéficier de leurs oméga-3 et fibres. - À consommer rapidement après broyage pour éviter l\\'oxydation. - Graines de chia (optionnel) : - Bien qu\\'elles puissent être consommées entières, on peut également > les moudre. - Graines de courge : - Elles peuvent être moulues pour intégrer des préparations (farines, > pesto) ou consommées entières. - Ces graines sont facilement digestibles et n\\'ont pas besoin d\\'être > moulues : - Graines de sésame : - Riches en calcium, elles peuvent être consommées entières ou sous > forme de tahini. - Graines de tournesol : - Parfaites comme snack ou ajoutées aux salades. - Graines de pavot : - Utilisées entières dans les pâtisseries ou les plats. - Conseils pratiques : - Trempage : Certaines graines (lin, chia) gonflent au contact de > l\\'eau et créent un gel, ce qui améliore leur digestibilité. - Conservation : Les graines moulues doivent être conservées au > réfrigérateur dans un récipient hermétique pour éviter leur > rancissement."
+                }
+        ],
+        "ÉMOTIONS ET MOTIVATION": [
+                {
+                        "q": "1. Comment renforcer la motivation tout au long du programme ?",
+                        "a": "Le programme RFN intègre plusieurs outils comme nos challenges, nos vidéos thématiques, nos lives, notre groupe d'échanges ... pour vous aider à maintenir votre motivation. On vous suggère que de votre côté, vous travailliez aussi : - Affirmations positives : - Répétez des phrases comme : \\\"Je mérite de prendre soin de moi et de > mon corps.\\\" - Ces affirmations renforcent votre confiance et votre engagement. - Journal de gratitude : - Notez chaque jour trois choses positives, même petites, pour > cultiver un état d\\'esprit optimiste. - Visualisation : - Imaginez-vous atteignant vos objectifs (par exemple, porter une robe > qui vous plaît ou vous sentir pleine d\\'énergie). - Défis hebdomadaires : - Sortez de votre zone de confort en essayant une nouvelle activité ou > recette chaque semaine."
+                },
+                {
+                        "q": "2. Comment gérer les émotions négatives ou les moments de doute ?",
+                        "a": "Écrire dans un journal : - Libérez vos pensées en écrivant sur vos émotions et vos progrès. > Cela aide à clarifier vos préoccupations. - Identifier les pensées saboteuses : - Remplacez les pensées comme \\\"Je n\\'y arriverai jamais\\\" par des > affirmations positives. - Pratiquer la bienveillance envers soi-même : - Rappelez-vous que chaque effort compte, même si le chemin est > parfois difficile. - Soutien de la communauté : - Partagez vos moments de doute avec les autres participantes > (Natur'Ellas) pour trouver du réconfort et des conseils."
+                },
+                {
+                        "q": "3. Quels rituels de bien-être puis-je intégrer dans ma routine pour booster mon moral ?",
+                        "a": "Voici une journée type pour allier bien-être physique et mental : - Matin : Réveil avec méditation ou respiration consciente, suivi > d'affirmations positives. - Milieu de journée : Une marche en pleine nature ou une séance de > yoga doux. - Après-midi : Écriture dans un journal ou pratique de gratitude. - Soirée : Bain chaud avec huiles essentielles (lavande ou camomille) > pour relâcher les tensions."
+                },
+                {
+                        "q": "4. Comment transformer les obstacles en opportunités ?",
+                        "a": "Reformulez les défis : Voyez les obstacles comme une chance d'apprendre et de grandir. Exemple : Si un repas ne se passe pas comme prévu, réfléchissez à ce que vous pourrez ajuster la prochaine fois. Planifiez vos réponses : Préparez des stratégies pour les situations difficiles (comme les repas festifs ou les envies de grignotage). Célébrez les petites victoires : Chaque progrès, même minime, mérite d'être reconnu et célébré. 🌷HYDRATATION En cas de pathologie nécessitant une restriction hydrique, veuillez strictement suivre les recommandations de votre médecin."
+                },
+                {
+                        "q": "1- Quel est le calcul pour mon hydratation quotidienne ?",
+                        "a": "Vous devez multiplier VOTRE POIDS x 35 = la quantité d'eau que vous devez boire par jour."
+                },
+                {
+                        "q": "2- Je dois boire plus de 3 litres par jour, cela ne fait pas trop ?",
+                        "a": "Non, c'est votre besoin quotidien qui est compatible avec ce dont votre corps a besoin."
+                },
+                {
+                        "q": "3- Boire plus d'eau ne fatigue pas les reins ?",
+                        "a": "Au contraire, vos reins ont besoin d'un apport d'eau optimal pour bien fonctionner."
+                },
+                {
+                        "q": "4 - Le café compte dans le quota de mon hydratation quotidienne ?",
+                        "a": "Non, le café ne compte pas. Ni les thés."
+                },
+                {
+                        "q": "5- Les tisanes comptent dans le quota de mon hydratation quotidienne ?",
+                        "a": "Oui, si elles sont sans sucre. La quantité idéale de tisanes à consommer par jour est de 1 litre au maximum."
+                },
+                {
+                        "q": "6- Les eaux aromatisées comptent dans mon quota de mon hydratation quotidienne ?",
+                        "a": "Oui, si elles sont des recettes maison (regardez l'E-book Boissons Santé) et bien évidemment pas sucrées."
+                },
+                {
+                        "q": "7- Je fais de la rétention hydrique, j'ai peur de boire.",
+                        "a": "Au contraire, sauf recommandation de votre médecin, vous devez boire pour aider votre corps à éliminer les toxines. L'eau est le meilleur diurétique qui existe !"
+                },
+                {
+                        "q": "8 - J'ai commencé à boire plus, et je vais beaucoup aux toilettes, c'est normal ?",
+                        "a": "Oui, cela veut dire que vous éliminez des toxines, les reins ont un rôle crucial dans l'auto-nettoyage du corps."
+                },
+                {
+                        "q": "9- Pourquoi boire plus, c'est si important pour la perte de poids ?",
+                        "a": "Sans une hydratation idéale, il n'existe pas de perte de poids. L'eau est essentielle pour accélérer le métabolisme. Les études disent que l'eau peut accélérer le métabolisme jusqu'à 30 % en plus."
+                },
+                {
+                        "q": "10 - J'oublie de boire, quelles astuces pour boire plus ?",
+                        "a": "Acheter une gourde d'un litre avec les mensurations de la quantité d'eau Acheter un grand mug 400 ml pour les tisanes Mettre un alarme sur votre portable Commencer la journée avec un grand verre d'eau Emporter une gourde avec soi Faire des eaux aromatisées et des tisanes"
+                },
+                {
+                        "q": "11- Quelles eaux recommandez-vous au sein du programme ?",
+                        "a": "Nous vous recommandons les eaux faiblement minéralisées ou l'eau du robinet si elle est bonne chez vous."
+                },
+                {
+                        "q": "12- Peut-on boire de l'eau pétillante ?",
+                        "a": "Aucun souci."
+                },
+                {
+                        "q": "13. Qu\\'est-ce qu\\'une eau faiblement minéralisée ?",
+                        "a": "Une eau faiblement minéralisée est une eau qui contient une faible quantité de minéraux dissous, tels que le calcium, le magnésium, le sodium, le potassium, etc. Ce type d\\'eau est caractérisé par sa teneur réduite en minéraux, ce qui la distingue des eaux minérales naturelles qui peuvent contenir des concentrations plus élevées de minéraux. Elles sont souvent recommandées pour la préparation des biberons pour les nourrissons, car elles sont considérées comme des eaux douces et légères en bouche."
+                }
+        ],
+        "ACTIVITÉ PHYSIQUE": [
+                {
+                        "q": "1. Dois-je obligatoirement faire du sport pour obtenir des résultats ?",
+                        "a": "Non, il n\\'est pas obligatoire de pratiquer une activité physique intense pour obtenir des résultats avec le programme RFN. L\\'accent est mis sur une approche holistique qui combine une alimentation adaptée, une gestion des émotions et une optimisation du métabolisme. Cela dit, intégrer une activité physique douce peut amplifier les bénéfices du programme en stimulant le métabolisme, en renforçant la tonicité musculaire et en améliorant l'humeur. Même de petites actions comme marcher 30 minutes par jour, pratiquer des exercices de respiration ou du yoga peuvent suffire à soutenir la perte de poids et le bien-être général."
+                },
+                {
+                        "q": "2. Quels types d'exercices sont compatibles avec le programme RFN ?",
+                        "a": "Le programme encourage des activités physiques adaptées aux besoins et capacités des participantes. Voici quelques exemples compatibles avec RFN : Exercices doux : - Yoga ou Pilates : Pour améliorer la souplesse, réduire le stress et > renforcer les muscles en douceur. - Marche rapide : Idéale pour brûler des calories et stimuler le > métabolisme sans impact sur les articulations. - Étirements : Pour détendre les muscles et améliorer la circulation. Activités modérées (selon votre niveau) : - Natation : Excellente pour travailler tout le corps sans pression > sur les articulations. - Vélo : Une activité cardio douce qui tonifie le bas du corps. - Danse : Pour combiner plaisir et dépense énergétique. Focus sur le bien-être : - Méditation en mouvement : Par exemple, le Qi Gong ou le Tai Chi pour > allier relaxation et activité physique. - Exercices de respiration : Pour réduire le stress et améliorer > l\\'oxygénation. Astuce : L'objectif est de choisir une activité qui vous procure du plaisir et que vous pouvez intégrer facilement dans votre quotidien. Cela permettra de maintenir la motivation et de favoriser une progression constante."
+                }
+        ],
+        "MANDALA MÉTABOLIQUE MODULE 4": [
+                {
+                        "q": "1 - C'est quoi le mandala métabolique ?",
+                        "a": "C'est un outil du programme qui est sur la plateforme, pour vous aider à détecter les éventuels blocages métaboliques."
+                },
+                {
+                        "q": "2. Je dors mal en ce moment, quoi faire ?",
+                        "a": "On vous suggère de regarder le protocole Sommeil et les deux cours dédiés à cette thématique. Si votre insomnie est chronique, on vous recommande de consulter votre médecin."
+                },
+                {
+                        "q": "3. J'ai des bouffées de chaleur à cause de la ménopause, quoi faire ?",
+                        "a": "On vous suggère de regarder le protocole Ménopause pour vous aider à avoir plus de bien-être. Ce protocole ne remplace pas un traitement, si vos symptômes se sont aggravés, on vous recommande de consulter votre médecin ou votre gynécologue."
+                },
+                {
+                        "q": "4. Je pense avoir des intolérances alimentaires, quoi faire ?",
+                        "a": "On vous suggère de regarder le protocole Intolérances Alimentaire et le cours dédié à cette thématique."
+                },
+                {
+                        "q": "5. Je pense faire de la résistance à l'insuline, quoi faire ?",
+                        "a": "On vous suggère de regarder le protocole Résistance à l'insuline pour plus d'informations. Ce protocole ne remplace pas un traitement, on recommande de consulter votre médecin pour réaliser un bilan sanguin complet avec un test Index Homa IR. Si un diagnostic de diabète de type 2 a déjà été établi, il n'est pas nécessaire de réaliser ce bilan."
+                },
+                {
+                        "q": "6. Je fais de la résistance à l'insuline, quoi faire ?",
+                        "a": "On vous suggère de regarder le protocole Résistance à l'insuline pour plus d'informations, mais aussi de prendre les compléments alimentaires recommandés. Pour l'alimentation : suivez le protocole Bas glucides avec le minimum d'écart possible (pendant 3 et 6 mois)."
+                },
+                {
+                        "q": "7. J'ai un bilan normal de la thyroïde, mais je ressens des symptômes, quoi faire ?",
+                        "a": "On vous suggère de regarder le protocole Thyroïde pour vous aider à avoir plus de bien-être. Ce protocole ne remplace pas un traitement, si vos symptômes se sont aggravés, on vous recommande de consulter votre médecin ou votre endocrinologue."
+                },
+                {
+                        "q": "8. Je me sens stressée \"à fleur de peau\" en ce moment, quoi faire ?",
+                        "a": "On vous suggère de regarder le protocole Cortisol pour vous aider à avoir plus de bien-être. Ce protocole ne remplace pas un traitement, si vos symptômes se sont aggravés, on vous recommande de consulter votre médecin. NOUS NE DONNONS PAS DE CONSEILS NATURELS OU DES SUGGESTIONS À PROPOS DES SUJETS PARTICULIERS EN DEHORS DU PROGRAMME. TOUS NOS RECOMMANDATIONS SONT SUR LES PROTOCOLES DU MANDALA MÉTABOLIQUE. SI VOUS AVEZ UNE PATHOLOGIE QUI DEMANDE UNE PRISE EN CHARGE SPÉCIFIQUE, NE PRENEZ PAS LES COMPLÉMENTS ALIMENTAIRES SUGGÉRÉS SANS AVOIR L'AVIS DE VOTRE PROFESSIONNEL DE SANTÉ. RAFAELA TILLIER, LE PROGRAMME ET SON ÉQUIPE NE RESPONSABILISENT PAS DU MAUVAIS USAGE DES RECOMMANDATIONS."
+                }
+        ],
+        "PRISES DE SANG": [
+                {
+                        "q": "1 - J\\'ai des symptômes qui peuvent suggérer une résistance à l\\'insuline (ou j\\'ai une note élevée pour le mandala métabolique). Que dois-je faire ?",
+                        "a": "Nous ne sommes pas en position de vous donner aucun diagnostic au sein du programme. Cependant, il y a un examen rarement demandé par les généralistes et qui peut dévoiler une insulinorésistance parfois cachée par une glycémie à jeun normale. Cet examen s\\'appelle index HOMA IR. Si vous soupçonnez que votre capacité à métaboliser les sucres ne va pas très bien, on vous suggère de demander à votre médecin de vous prescrire ce test."
+                },
+                {
+                        "q": "2 - J\\'ai des symptômes qui peuvent suggérer un trouble de la thyroïde (ou j\\'ai une note élevée pour le mandala métabolique). Que dois-je faire ?",
+                        "a": "Nous ne sommes pas en position de vous donner aucun diagnostic au sein du programme. Cependant, un bilan des hormones thyroïdiennes (TSH, T4, T3) et de vos anticorps (Thyroperoxydase, thyroglobuline, anti récepteur de la TSH, \\...) demandé par votre médecin peut permettre à votre médecin de déterminer si vous avez un trouble de la thyroïde et de vous prescrire un traitement s\\'il ou elle le juge nécessaire."
+                },
+                {
+                        "q": "3 - J\\'ai des symptômes qui peuvent suggérer un excès de cortisol (ou j\\'ai une note élevée pour le mandala métabolique). Que dois-je faire ?",
+                        "a": "Si c\\'est le cas, on sait que le fait d\\'implémenter une hygiène de vie plus équilibrée et un sommeil de meilleure qualité peuvent vous aider beaucoup. Par contre, si votre niveau de stress est vraiment très persistant, nous vous suggérons alors de voir votre médecin et de lui demander un dosage de cortisol."
+                }
+        ],
+        "TEST D\\'INTOLÉRANCE ALIMENTAIRE": [
+                {
+                        "q": "1 - Comment je fais pour savoir si je suis intolérante à certains aliments ?",
+                        "a": "Pour chercher vos intolérances alimentaires, il y a plusieurs méthodes possibles. Par exemple, les protocoles 1 et 2 du programme vous permettent d\\'enlever des produits qui sont normalement les plus problématiques (lactose, gluten, légumineuses) et les réintroduire après pour voir s\\'ils causent des soucis au niveau de votre digestion ou si vous avez des réactions. Pour cela, on vous suggère de tenir un journal alimentaire et de prendre note de vos repas pour détecter les aliments problématiques. Sinon, une autre possibilité qui a donné des bons résultats pour vous aider dans votre recherche est de réaliser le test d\\'intolérances alimentaires du site suivant : https://www.testyourintolerance.fr/ C'est à vous de lire et interpréter les résultats de votre test d'intolérance alimentaire. Nous ne pouvons pas le faire de façon individuelle. Voici comment le faire :"
+                },
+                {
+                        "q": "2. Comment procéder ?",
+                        "a": "- Phase 1 : Suppression des aliments en rouge (plus de 95%) Durée : 8 semaines. Supprimez uniquement les aliments en rouge pour laisser votre intestin se reposer. Pour les aliments en orange, limitez leur consommation sans les éliminer complètement. - Phase 2 : Réintroduction progressive Après 8 semaines, réintroduisez les aliments un par un, en laissant 3 à 4 jours entre chaque nouvel aliment. Cela permet d'observer les réactions (ballonnements, gaz, douleurs, etc.). Notez vos observations dans un journal alimentaire. Important à savoir : c\\'est une entreprise que nous avons déjà utilisée dans le passé pour les tests de plusieurs participantes. Nous vous recommandons de réaliser le test SIMPLE. Mais c\\'est à vous de décider lequel vous souhaitez faire. Par contre, nous n\\'avons aucun lien commercial ni institutionnel avec cette entreprise. Si vous décidez d\\'utiliser leurs services, c\\'est à vous de le réaliser, de faire le paiement et d\\'envoyer votre échantillon. Vous gérez votre démarche directement avec eux, nous ne sommes pas d\\'intermédiaires et nous ne faisons pas non plus de support client pour eux. Ce test n'est pas un outil médical, donc pas remboursé, il ne peut pas être utilisé pour un diagnostic, mais plutôt comme un auxiliaire dans votre démarche bien-être."
+                }
+        ],
+        "LES FRUSTRATIONS ET LES ATTENTES IRRÉELLES": [
+                {
+                        "q": "1 - J\\'ai perdu 2, 3, 4, 5... kilos pendant les premières semaines et je n\\'ai pas perdu de poids cette semaine ou depuis deux ou trois semaines. Je suis frustrée/découragée. Qu\\'est-ce que je dois faire ?",
+                        "a": "Alors, les filles, cette question peut se présenter en plusieurs variations. Mais une chose est sûre : on aura toujours des participantes qui ont des attentes démesurées (et même parfois irréelles) par rapport à la perte de poids. La première chose à se rappeler : la perte de poids n\\'est pas linéaire. Quand on commence à perdre du poids, notre corps va jouer contre nous. Il ne veut pas perdre de gras. Nos ancêtres n\\'avaient pas l\\'abondance alimentaire que nous avons aujourd\\'hui. Alors, notre corps est adapté à stocker du gras. Alors, il va falloir du temps pour que notre perte de masse graisseuse soit CONSOLIDÉE. C\\'est pour cela que la perte de poids n\\'est pas linéaire.\\ ![](media/image1.png){width=\"5.860192475940507in\" height=\"1.1685247156605425in\"}"
+                }
+        ]
+};
+
+        function createFAQHTML() {
+            const faqContent = document.getElementById('faqContent');
+            const categoryList = document.getElementById('categoryList');
+            let totalQuestions = 0;
+
+            Object.keys(faqData).forEach((category, index) => {
+                const categoryId = `category-${index}`;
+                
+                const categoryLink = document.createElement('li');
+                categoryLink.className = 'category-item';
+                categoryLink.innerHTML = `<a href="#${categoryId}" class="category-link">${category}</a>`;
+                categoryList.appendChild(categoryLink);
+
+                const section = document.createElement('section');
+                section.className = 'section';
+                section.id = categoryId;
+                section.innerHTML = `<h2 class="section-title"><span class="tulip-decoration">🌷</span>${category}</h2>`;
+
+                faqData[category].forEach((item, qIndex) => {
+                    totalQuestions++;
+                    const faqItem = document.createElement('div');
+                    faqItem.className = 'faq-item';
+                    faqItem.setAttribute('data-question', item.q.toLowerCase());
+                    faqItem.setAttribute('data-answer', item.a.toLowerCase());
+                    
+                    faqItem.innerHTML = `
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>${item.q}</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>${item.a}</p>
+                        </div>
+                    `;
+                    
+                    section.appendChild(faqItem);
+                });
+
+                faqContent.appendChild(section);
+            });
+
+            document.getElementById('questionCount').textContent = `${totalQuestions} questions disponibles`;
+        }
+
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = element.classList.contains('active');
+
+            document.querySelectorAll('.faq-question').forEach(q => {
+                q.classList.remove('active');
+                q.nextElementSibling.classList.remove('active');
+            });
+
+            if (!isActive) {
+                element.classList.add('active');
+                answer.classList.add('active');
+            }
+        }
+
+        function searchFAQ() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            const sections = document.querySelectorAll('.section');
+            let visibleCount = 0;
+
+            sections.forEach(section => section.style.display = 'block');
+
+            if (searchTerm.trim() === '') {
+                faqItems.forEach(item => {
+                    item.style.display = 'block';
+                    visibleCount++;
+                });
+                document.getElementById('stats').innerHTML = `<span id="questionCount">${visibleCount} questions disponibles</span>`;
+                return;
+            }
+
+            faqItems.forEach(item => {
+                const question = item.getAttribute('data-question');
+                const answer = item.getAttribute('data-answer');
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            sections.forEach(section => {
+                const visibleItems = section.querySelectorAll('.faq-item[style="display: block;"]');
+                if (visibleItems.length === 0) {
+                    section.style.display = 'none';
+                }
+            });
+
+            if (visibleCount === 0) {
+                document.getElementById('faqContent').innerHTML = `
+                    <div class="no-results">
+                        <h3>🌷 Aucun résultat trouvé</h3>
+                        <p>Essayez avec d'autres mots-clés ou consultez l'index pour naviguer par catégories.</p>
+                    </div>
+                `;
+            }
+
+            document.getElementById('stats').innerHTML = `<span id="questionCount">${visibleCount} question(s) trouvée(s) pour "${searchTerm}"</span>`;
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.getElementById('searchInput').addEventListener('input', searchFAQ);
+
+        window.addEventListener('scroll', () => {
+            const backToTop = document.getElementById('backToTop');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createFAQHTML();
+
+            const observerOptions = {
+                root: null,
+                threshold: 0.3
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const categoryLinks = document.querySelectorAll('.category-link');
+                        categoryLinks.forEach(link => link.classList.remove('active'));
+                        
+                        const activeLink = document.querySelector(`a[href="#${entry.target.id}"]`);
+                        if (activeLink) {
+                            activeLink.classList.add('active');
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.section').forEach(section => {
+                observer.observe(section);
+            });
+
+            document.querySelectorAll('.category-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
